@@ -46,6 +46,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Particle Ribbon\Scripts\ReverseNormals.cs" />
+     <Compile Include="Assets\Scripts\Manager.cs" />
+     <Compile Include="Assets\Scripts\specAnalyzer.cs" />
      <Compile Include="Assets\Scripts\spectrumAnalyzer.cs" />
      <None Include="Assets\Particle Ribbon\readme_Simple_Particle_Ribbon.txt" />
  <Reference Include="UnityEngine.UI">
