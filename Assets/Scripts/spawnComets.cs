@@ -11,7 +11,7 @@ public class spawnComets : MonoBehaviour {
     }
 
 	void SpawnComet () {
-        Vector3 v = new Vector3(Random.Range(-10,10), Random.Range(-5, 5), Random.Range(-3, 10));
+        Vector3 v = new Vector3(Random.Range(-8,8), Random.Range(-5, 5), Random.Range(-3, 15));
         Instantiate(comet, v, Quaternion.Euler(0, 180,0));
 	}
 }

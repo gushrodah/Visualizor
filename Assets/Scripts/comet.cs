@@ -23,7 +23,7 @@ public class comet : MonoBehaviour {
 	void Update () {
         timeAlive += Time.deltaTime;
         //gameObject.transform.position = (new Vector3(transform.position.x, (Mathf.Sin(timeAlive) * .5f), transform.position.z));
-        gameObject.transform.Translate(new Vector3(0, (Mathf.Sin(timeAlive) * .005f), 0));
+        gameObject.transform.Translate(new Vector3(0, (Mathf.Sin(timeAlive) * .01f), 0));
     }
 
     void Die()

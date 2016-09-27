@@ -8,13 +8,13 @@ public class LB : MonoBehaviour {
     Light bassL;
 
     // frequency data
-    specAnalyzer SpecData;
+    Manager SpecData;
 
     void Start () {
         bassL = L1.GetComponent<Light>();
 
-        GameObject temp = GameObject.Find("music");
-        SpecData = temp.GetComponent<specAnalyzer>();
+        GameObject temp = GameObject.Find("spectrum equalizer");
+        SpecData = temp.GetComponent<Manager>();
     }
 	
 	void Update () {

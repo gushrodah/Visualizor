@@ -3,27 +3,24 @@ using System.Collections;
 
 public class BurstSpawn : MonoBehaviour {
     
-    specAnalyzer music;
+    Manager music;
+	public TYPE musicType;
+	public float max;
     public GameObject burstPart;
-    float count;
+	float count = 0.0f;
+
 	void Start () {
-        music = GameObject.Find("music").GetComponent<specAnalyzer>();
-        
+        music = GameObject.Find("spectrum equalizer").GetComponent<Manager>();
 	}
 
     void Update()
     {
-        //Debug.Log(music.bassSamples[7]);
-        if (music.freqData[7] > .1f && count > .75f)
+		if (music.OnBeat(musicType)&& count >.5f)
         {
-            Vector3 v = new Vector3(Random.Range(-10, 10), Random.Range(-5, 5), Random.Range(-3, 10));
+            Vector3 v = new Vector3(Random.Range(-5, 5), Random.Range(-5, 5), Random.Range(1, 10));
             Instantiate(burstPart, v, Quaternion.Euler(Random.Range(-90,90), Random.Range(-90, 90), Random.Range(-90, 90)));
-            count = 0;
+			count = 0;
         }
-        count+= Time.deltaTime;
+		count += Time.deltaTime;
     }
-	
-	void CheckData () {
-        
-	}
 }
